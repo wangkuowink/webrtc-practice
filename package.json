@@ -1,0 +1,31 @@
+{
+  "name": "webrtc-practice",
+  "version": "1.0.0",
+  "description": "WebRTC 练习项目 - 前端实战",
+  "scripts": {
+    "dev": "concurrently -k -n server,client -c blue,green \"npm run server\" \"npm run client\"",
+    "client": "vite",
+    "server": "tsx watch src/server/index.ts",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview",
+    "typecheck": "vue-tsc --noEmit"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "pinia": "^2.2.4",
+    "vue": "^3.5.12",
+    "vue-router": "^4.4.5",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.8.6",
+    "@types/ws": "^8.5.13",
+    "@vitejs/plugin-vue": "^5.1.4",
+    "concurrently": "^9.0.1",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10",
+    "vue-tsc": "^2.1.6"
+  }
+}
